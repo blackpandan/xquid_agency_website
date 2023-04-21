@@ -3,6 +3,26 @@ import {onMounted, ref} from 'vue';
 import WorkCard from '../WorkCard.vue';
 
 const works = ref(null);
+  let datas =  [
+    {
+      imgUrl: "/worksImage/luxe.png",
+      header: "LUXE CROWN AFRICA",
+      info: "this is a sample site that was made to aid those that intended to be aided",
+      url: "y",
+    },
+    {
+      imgUrl: "/worksImage/skarstrokes.png",
+      header: "SKARSTROKES STUDIO",
+      info: "this is a sample site that was made to aid those that intended to be aided",
+      url: "",
+    },
+    {
+      imgUrl: "/worksImage/xquid.png",
+      header: "XQUID WEB AGENCY",
+      info: "this is a sample site that was made to aid those that intended to be aided",
+      url: "",
+    }
+]
 
 
 onMounted(()=>{
@@ -25,9 +45,7 @@ onMounted(()=>{
     <section class="section works" id="works" ref="works">
         <h2 class="works__header" >SELECTED WORKS</h2>
         <div class="works__collection">
-            <WorkCard />
-            <WorkCard />
-            <WorkCard />
+            <WorkCard v-for="(data, index) in datas" :key="index" :data="data"  />
         </div>
     </section>
 </template>

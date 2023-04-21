@@ -1,16 +1,22 @@
 <script setup>
 // code...
+
+  let props = defineProps({
+    data: Object
+  })
+
+  
 </script>
 
 <template>
   <div class="workCard">
-    <div class="workCard__imgBox"><img class="workCard__imgBox--img" src="../../public/worksImage/luxe.png" alt=""></div>
+    <div class="workCard__imgBox"><img class="workCard__imgBox--img" :src="data.imgUrl" alt=""></div>
     <div class="workCard__info">
       <div class="workCard__info--textBox">
-        <h3 class="workCard__info--header">LUXE CROWN AFRICA</h3>
-        <p class="workCard__info--text">this is a sample site that was made to aid those that intended to be aided</p>
+        <h3 class="workCard__info--header">{{ data.header }}</h3>
+        <p class="workCard__info--text">{{ data.info }}</p>
       </div>
-      <button class="button button--black workCard__info--button">view work</button>
+      <button v-if="data.url" class="button button--black workCard__info--button">view work</button>
     </div>
   </div>
 </template>
@@ -33,7 +39,7 @@
 
   &__imgBox{
     /* width: 26vw; */
-    /* height: 38vmin; */
+    height: 43vmin;
     padding: 0vmin;
 
     &--img{
