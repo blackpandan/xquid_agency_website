@@ -7,7 +7,7 @@
       <a href="https://facebook.com/xquidtech/" target="_blank">
         <img src="../assets/icons/facebook.svg" alt="facebook logo" class="socialLinks__icons--icon">
       </a>
-      <a href="https://linkedin.com/in/xquidtech/" target="_blank">
+      <a href="https://linkedin.com/company/xquidtech/" target="_blank">
         <img src="../assets/icons/linkedin.svg" alt="linkedin logo" class="socialLinks__icons--icon">
       </a>
       <a href="https://www.instagram.com/xquidtech/" target="_blank">
