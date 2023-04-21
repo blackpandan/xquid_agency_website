@@ -16,7 +16,7 @@
         <h3 class="workCard__info--header">{{ data.header }}</h3>
         <p class="workCard__info--text">{{ data.info }}</p>
       </div>
-      <button v-if="data.url" class="button button--black workCard__info--button">view work</button>
+      <a :href="data.url" v-if="data.url" class="button button--black workCard__info--button">view work</a>
     </div>
   </div>
 </template>

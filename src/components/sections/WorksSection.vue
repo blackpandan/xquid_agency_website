@@ -14,13 +14,13 @@ const works = ref(null);
       imgUrl: "/worksImage/skarstrokes.png",
       header: "SKARSTROKES STUDIO",
       info: "this is a sample site that was made to aid those that intended to be aided",
-      url: "",
+      url: "y",
     },
     {
       imgUrl: "/worksImage/xquid.png",
       header: "XQUID WEB AGENCY",
       info: "this is a sample site that was made to aid those that intended to be aided",
-      url: "",
+      url: "y",
     }
 ]
 
