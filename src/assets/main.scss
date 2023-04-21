@@ -1,0 +1,93 @@
+@use 'base.scss';
+
+.button {
+  font-size: calc(0.85em + 0.5vmin);
+  padding: 0.3em 0.7em 0.3em 0.7em;
+  border-radius: 2.5px;
+  border: 1px solid;
+  cursor: pointer;
+  
+  &:hover{
+    text-decoration: none !important;
+    
+  }
+
+  &--white{
+  background-color: vars.$secondary-color;
+  border: 1px solid vars.$secondary-color; 
+  color: vars.$primary-color; 
+
+    &:hover{
+      color: vars.$secondary-color;
+      background-color: vars.$primary-color;
+    
+    }
+  }
+
+  &--gold{
+
+  background-color: vars.$offnet-color;
+  color: vars.$primary-color;
+  border: 1px solid vars.$offnet-color;
+
+  &:hover{
+    color: vars.$secondary-color;
+    background-color: vars.$primary-color;
+    
+  }
+  }
+
+
+  &--black{
+  color: vars.$secondary-color;
+  border: 1px solid vars.$primary-color; 
+  background-color: vars.$primary-color; 
+
+  &:hover{
+    background-color: vars.$secondary-color;
+    color: vars.$primary-color;
+    
+  }
+  }
+
+}
+
+.input{
+  border: 1px solid vars.$secondary-color;
+  // color: vars.$secondary-color;
+  // background-color: transparent;
+  background-color: vars.$secondary-color;
+  color: vars.$primary-color;
+  font-size: calc(0.6em + 1vmin);
+  padding: 0.6em 2vmin 0.6em 2vmin;
+  width: 100%;
+
+
+  &:focus{
+    border-color: vars.$secondary-color;
+    outline: none;
+  }
+
+  &--outline{
+
+  border-color: transparentize($color: vars.$secondary-color, $amount: 0.5);
+  color: vars.$secondary-color;
+  background-color: transparent;
+  }
+
+  &--gold{
+    border-color: transparentize(vars.$offnet-color, 0.5);
+
+    &:focus{
+      border-color: transparentize(vars.$offnet-color, 0.5);
+      outline: 1px solid vars.$offnet-color;
+    }
+  }
+
+  &--message{
+    min-height: 20vmin;
+    resize: none;
+  }
+}
+
+
