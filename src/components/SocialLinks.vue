@@ -4,16 +4,16 @@
 <template>
   <div class="socialLinks">
     <div class="socialLinks__icons">
-      <a href="https://facebook.com" target="_blank">
+      <a href="https://facebook.com/xquidtech/" target="_blank">
         <img src="../assets/icons/facebook.svg" alt="facebook logo" class="socialLinks__icons--icon">
       </a>
-      <a href="#" target="_blank">
+      <a href="https://linkedin.com/in/xquidtech/" target="_blank">
         <img src="../assets/icons/linkedin.svg" alt="linkedin logo" class="socialLinks__icons--icon">
       </a>
-      <a href="#" target="_blank">
+      <a href="https://www.instagram.com/xquidtech/" target="_blank">
         <img src="../assets/icons/instagram.svg" alt="instagram logo" class="socialLinks__icons--icon">
       </a>
-      <a href="#" target="_blank">
+      <a href="https://twitter.com/xquidtech/" target="_blank">
         <img src="../assets/icons/twitter.svg" alt="twitter logo" class="socialLinks__icons--icon">
       </a>
     </div>
