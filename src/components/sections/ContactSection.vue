@@ -1,21 +1,34 @@
 <script setup >
 import {ref} from 'vue';
 import axios from 'axios';
+import LoaderBar from '../LoaderBar.vue';
 
 
-let messages = ref(null);
+// messages
 let errorMessages = ref(false);
 let successMessage = ref(false);
 
+// for loader
+let loader = ref(false);
+
+// details
 let firstName = ref(null);
 let lastName = ref(null);
 let email = ref(null);
 let message = ref(null);
 
+function reset_fields(event){
+    firstName.value = "";
+    lastName.value = "";
+    email.value = "";
+    message.value = "";
+    event.target.reset();
+}
 
-async function handleSubmit(){
+function handleSubmit(event){
     successMessage.value = false;
     errorMessages.value = false;
+    loader.value = true;
 
     axios.post("https://formspree.io/f/xbjeqypo", {
         "firstName": firstName.value,
@@ -23,18 +36,25 @@ async function handleSubmit(){
         "email": email.value,
         "message": message.value
     }).then(()=>{
+        loader.value = false;
+
         successMessage.value = true;
-        messages.value.focus();
+        
+        reset_fields(event);
+
         setTimeout(()=>{
             successMessage.value = false;
-        }, 4000)
-    }).catch((err)=>{
-        console.log(err.response.data, "start")
+        }, 4000);
+
+
+    }).catch(()=>{
+        loader.value = false;
+
         errorMessages.value = true;
-        messages.value.focus();
+        
         setTimeout(()=>{
             errorMessages.value = false;
-        }, 4000)
+        }, 4000);
         // let errors = err.response.data.errors;
         //
         // if( errors.length >= 1 ){
@@ -47,6 +67,7 @@ async function handleSubmit(){
         //
         // console.log(errorMessages.value)
     })
+
 }
 
 
@@ -54,9 +75,8 @@ async function handleSubmit(){
 
 <template>
     <section class="section contact" id="contact">
-        <h2 class="contact__header">Send us a message</h2>
-    
-        <div class="messages" ref="messages" v-if="successMessage || errorMessages">
+        <LoaderBar :loader="loader" />
+        <div class="messages" v-if="successMessage || errorMessages">
             <div class="messages__success" v-if="successMessage">
                 <p class="messages__success--message"  >Your Message Has Been Sent Successfully</p>
             </div>
@@ -64,6 +84,8 @@ async function handleSubmit(){
                 <p class="messages__error--message">Something Went Wrong Please Try Again</p>
             </div>
         </div>
+
+        <h2 class="contact__header">Send us a message</h2>
 
         <form @submit.prevent="handleSubmit" class="contact__form" >
             <fieldset class="contact__form--outerBox">
