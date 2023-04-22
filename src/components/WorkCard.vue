@@ -53,23 +53,25 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
-    padding: 1em 8vmin 1em 2vmin;
+    padding: 1em 4vmin 1em 2vmin;
     width: 30vw;
     gap: 2em 0;
 
     &--textBox{
       display: flex;
       flex-direction: column;
-      gap: 0.5em 0;
+      gap: 1em 0;
     }
 
     &--header{
-      font-size: calc(1em + 3vmin);
+      font-size: calc(1em + 4vmin);
       font-family: vars.$font-family;
     }
-    // &--text{
-    //
-    // }
+    &--text{
+      font-size: calc(0.6em + 1.3vmin);
+      color: transparentize($color: vars.$primary-color, $amount: 0.1);
+      line-height: calc(0.8em + 1.3vmin);
+    }
     &--button{
       width: fit-content;
     }

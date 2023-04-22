@@ -9,7 +9,7 @@ import ScrollButton from '../ScrollButton.vue'
 
       <div class="landing__box">
         <h2 class="landing__create">WE CREATE </h2>
-        <h1 class="landing__design">DESIGN THAT </h1>
+        <h1 class="landing__design">WEBSITE THAT </h1>
           <h1 class="landing__design">TELLS YOUR STORY</h1>
       </div>
       <!-- <div class="backgroundText"> -->
