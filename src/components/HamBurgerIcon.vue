@@ -1,11 +1,19 @@
 <script setup lang="ts">
 // code...
+
+import {ref} from 'vue';
+
+  const checkbox = ref(false);
+    
+  function closeNav(){
+    checkbox.value = false;
+  }
 </script>
 
 <template>
   <div class="hambu">
 
-    <input class="hambu__toggle" id="" type="checkbox" name="" aria-label="hamburge icon toggle" />
+    <input v-model="checkbox" class="hambu__toggle" id="" type="checkbox" name="" aria-label="hamburge icon toggle" />
 
     <div class="hamburger">
       <span class="hamburger__line"></span>
@@ -15,13 +23,13 @@
   
 
     <div class="hambu__menu">
-      <a href="#landing" class="hambu__menu--item">home
+      <a @click="closeNav" href="#landing" class="hambu__menu--item">home
       </a>
-      <a href="#works" class="hambu__menu--item">projects
+      <a @click="closeNav" href="#works" class="hambu__menu--item">projects
       </a>
-      <a href="#whatWeDo" class="hambu__menu--item">about
+      <a @click="closeNav" href="#whatWeDo" class="hambu__menu--item">about
       </a>
-      <a href="#contact" class="button button--gold nav__link nav__link--talk">let's talk
+      <a @click="closeNav" href="#contact" class="button button--gold nav__link nav__link--talk">let's talk
       </a>
     </div> 
 
