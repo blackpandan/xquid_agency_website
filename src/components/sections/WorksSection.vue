@@ -7,20 +7,26 @@ const works = ref(null);
     {
       imgUrl: "/worksImage/luxe.png",
       header: "LUXE CROWN AFRICA",
-      info: "this is a sample site that was made to aid those that intended to be aided",
-      url: "y",
+      info: "A website created for Luxe a pageantry company that allowed contestants to easily create and manage their accounts and profiles. The website featured a secure payment processing system through Paystack for user voting and an admin panel to track contestant information, votes, and payments.",
+      url: "",
     },
     {
       imgUrl: "/worksImage/skarstrokes.png",
       header: "SKARSTROKES STUDIO",
-      info: "this is a sample site that was made to aid those that intended to be aided",
-      url: "y",
+      info: "A website made for skarstrokes a digital art studio that showcases their artworks and includes a custom CMS for easy management of their pictures. The website's user-friendly interface highlights the studio's works, while a contact form allows users to reach out to the studio",
+      url: "",
+    },
+    {
+      imgUrl: "/worksImage/ujgist.png",
+      header: "UJGIST CONFESSION",
+      info: "A website made for ujgist a WhatsApp TV that allows anonymous confessions through a custom form. The website also features an admin panel, accessible through login credentials, for the admin to read and delete confessions",
+      url: ""
     },
     {
       imgUrl: "/worksImage/xquid.png",
       header: "XQUID WEB AGENCY",
-      info: "this is a sample site that was made to aid those that intended to be aided",
-      url: "y",
+      info: "Our website which is a sample itself, of our works.",
+      url: "",
     }
 ]
 
