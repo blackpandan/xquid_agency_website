@@ -7,7 +7,7 @@ const props = defineProps({
 
 <template>
   <a :href="'#' + scrollTarget" class="scrollButton">
-    <h4 class="scrollButton__text">scroll</h4>
+    <p class="scrollButton__text">scroll</p>
     <button class="scrollButton__button">
     <i class="material-symbols-rounded scrollButton__button--icon">arrow_downward</i>
     </button>

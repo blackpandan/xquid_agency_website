@@ -5,25 +5,25 @@ import WorkCard from '../WorkCard.vue';
 const works = ref(null);
   let datas =  [
     {
-      imgUrl: "/worksImage/luxe.png",
+      imgUrl: "/worksImage/luxe",
       header: "LUXE CROWN AFRICA",
       info: "A website created for Luxe a pageantry company that allows contestants to easily create and manage their accounts and profiles. The website featured a secure payment processing system through Paystack for user voting and an admin panel to track contestant information, votes, and payments.",
       url: "",
     },
     {
-      imgUrl: "/worksImage/skarstrokes.png",
+      imgUrl: "/worksImage/skarstrokes",
       header: "SKARSTROKES STUDIO",
       info: "A website made for Skarstrokes a digital art studio that showcases their artworks and includes a custom CMS for easy management of their pictures. The website's user-friendly interface highlights the studio's works, while a contact form allows users to reach out to the studio",
       url: "",
     },
     {
-      imgUrl: "/worksImage/ujgist.png",
+      imgUrl: "/worksImage/ujgist",
       header: "UJGIST CONFESSION",
       info: "A website made for Ujgist a WhatsApp TV that allows anonymous confessions through a custom form. The website also features an admin panel, accessible through login credentials, for the admin to read and delete confessions",
       url: ""
     },
     {
-      imgUrl: "/worksImage/xquid.png",
+      imgUrl: "/worksImage/xquid",
       header: "XQUID WEB AGENCY",
       info: "Our website which is a sample itself, of our works.",
       url: "",

@@ -10,7 +10,24 @@
 
 <template>
   <div class="workCard">
-    <div class="workCard__imgBox"><img class="workCard__imgBox--img" :src="data.imgUrl" alt=""></div>
+    <div class="workCard__imgBox">
+      <picture>
+        <source :srcset="data.imgUrl+'-600.webp, 600w' +data.imgUrl+'-800.webp 800w, ' +data.imgUrl+'.webp 1440w'"
+          sizes="(max-width: 520px) 600px,
+          (max-width: 644px) 800px,
+          1440px
+          "
+          type="image/webp" />
+        <img class="workCard__imgBox--img" 
+          :srcset="data.imgUrl+'-600.jpg, 600w'+data.imgUrl+'-800.jpg 800w, ' +data.imgUrl+'.jpg 1440w'"
+
+          sizes="(max-width: 520px) 600px,
+          (max-width: 644px) 800px,
+          1440px"
+          :src="data.imgUrl+'.jpg'" 
+           :alt="data.header" />
+      </picture>
+    </div>
     <div class="workCard__info">
       <div class="workCard__info--textBox">
         <h3 class="workCard__info--header">{{ data.header }}</h3>

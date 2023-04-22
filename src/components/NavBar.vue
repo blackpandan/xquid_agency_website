@@ -22,7 +22,7 @@ onMounted(()=>{
 <template>
   <header class="navBar" ref="navBar" >
     
-    <p class="navBar__logo"><img class="navBar__logo--img" src="../assets/img/logo-gold.png" /><span>XQUID</span></p>
+    <p class="navBar__logo"><img class="navBar__logo--img" src="../assets/img/logo-gold.png" alt="logo"/><span>XQUID</span></p>
 
     <nav class="nav nav--desktop" role="navigation">
       <a href="#landing" class="nav__link nav__link--home">home
@@ -72,7 +72,8 @@ onMounted(()=>{
     gap: 0 0.2em;
 
     &--img{
-      max-height: 1.5em;
+      height: calc(1em + 2.5vmin);
+      width: calc(0.6em + 2vmin);
     }
 
 

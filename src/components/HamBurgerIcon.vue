@@ -5,7 +5,7 @@
 <template>
   <div class="hambu">
 
-    <input class="hambu__toggle" id="" type="checkbox" name="" />
+    <input class="hambu__toggle" id="" type="checkbox" name="" aria-label="hamburge icon toggle" />
 
     <div class="hamburger">
       <span class="hamburger__line"></span>
