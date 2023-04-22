@@ -93,7 +93,7 @@ function handleSubmit(event){
                     <input v-model="firstName" id="" class="input input--outline input--gold contact__form--firstName" type="text" name="" placeholder="First Name" required autocomplete="firstName">
                     <input v-model="lastName" id="" class="input input--outline input--gold contact__form--lastName" type="text" name="" placeholder="Last Name" autocomplete="lastName" required>
                 </fieldset>
-                <input id="" class="input input--outline input--gold contact__form--email" type="email" name="" placeholder="Email" autocomplete="email" required>
+                <input id="" v-model="email" class="input input--outline input--gold contact__form--email" type="email" name="" placeholder="Email" autocomplete="email" required>
                 <textarea v-model="message" id="" class="input input--outline input--gold input--message contact__form--message" type="text" name="" placeholder="Please tell us more about your current needs" autocomplete="message" required></textarea>
             </fieldset>
             <input class="button button--gold contact__form--submit" type="submit" value="Send">
